@@ -3,8 +3,11 @@ import ase.io
 from ase import Atoms
 from ase.visualize import view
 from ase.calculators.espresso import Espresso
+
+cif_infile = str(sys.argv[1])
+print(cif_infile)
 #Reads structure from .cif file and creates Atoms object
-struc_input = ase.io.read("ICSD_CollCode153941.cif")
+struc_input = ase.io.read("cif_infile")
 print(struc_input)
 #Defines the pseudopotentials for the atoms
 pseudopotentials = {'Ti': 'Ti.pbe-spn-kjpaw_psl.1.0.0.UPF',
